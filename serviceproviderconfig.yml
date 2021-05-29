@@ -1,3 +1,8 @@
+spring:
+  profiles:
+    active:
+	- dev
+---
 server:
   port: 8001
 
@@ -8,6 +13,7 @@ mybatis:
     - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
 spring:
+  profiles: dev
   application:
     name: microservice-dept
   datasource:
